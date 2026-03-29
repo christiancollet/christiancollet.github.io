@@ -8,11 +8,11 @@ nav_order: 6
 ---
 
 <div class="teaching-page-intro">
-  This page lists courses and seminars in a database-style format. Each row links to core materials such as syllabi, slide decks, assignments, and related student research topics.
+  This page lists courses and seminars in a database-style format. Each row links to core materials such as syllabi, slide decks, assignments, datasets, and related student research topics.
 </div>
 
 <div class="teaching-db-toolbar">
-  <input type="text" id="teaching-search" placeholder="Search course title, term, level, tags">
+  <input type="text" id="teaching-search" placeholder="Search course title, term, level, institution, tags">
   <select id="teaching-level">
     <option value="">All levels</option>
     <option value="Undergraduate">Undergraduate</option>
@@ -30,7 +30,6 @@ nav_order: 6
         <th>Level</th>
         <th>Institution</th>
         <th>Materials</th>
-        <th>Tags</th>
         <th>Status</th>
       </tr>
     </thead>
@@ -44,25 +43,38 @@ nav_order: 6
       >
         <td class="course-col">
           <div class="course-title">{{ course.title }}</div>
+          {% if course.summary %}
+          <div class="course-summary">{{ course.summary }}</div>
+          {% endif %}
         </td>
+
         <td>{{ course.term }}</td>
         <td>{{ course.level }}</td>
         <td>{{ course.institution }}</td>
+
         <td class="materials-col">
-          {% if course.syllabus %}<a href="{{ course.syllabus | relative_url }}">syllabus</a>{% endif %}
-          {% if course.slides %} · <a href="{{ course.slides | relative_url }}">slides</a>{% endif %}
-          {% if course.assignments %} · <a href="{{ course.assignments | relative_url }}">assignments</a>{% endif %}
-          {% if course.research %} · <a href="{{ course.research | relative_url }}">research topics</a>{% endif %}
+          {% if course.syllabus %}
+            <a href="{{ course.syllabus | relative_url }}">syllabus</a>
+          {% endif %}
+          {% if course.slides %}
+            · <a href="{{ course.slides | relative_url }}">slides</a>
+          {% endif %}
+          {% if course.assignments %}
+            · <a href="{{ course.assignments | relative_url }}">assignments</a>
+          {% endif %}
+          {% if course.datasets %}
+            · <a href="{{ course.datasets | relative_url }}">datasets</a>
+          {% endif %}
+          {% if course.research %}
+            · <a href="{{ course.research | relative_url }}">research topics</a>
+          {% endif %}
         </td>
+
         <td>
-          <div class="tag-list">
-            {% for tag in course.tags %}
-              {% assign tag_key = tag | downcase | replace: ' ', '-' %}
-              <span class="tag tag-{{ tag_key }}">{{ tag }}</span>
-            {% endfor %}
-          </div>
+          <span class="status-pill status-{{ course.status | downcase | replace: ' ', '-' }}">
+            {{ course.status }}
+          </span>
         </td>
-        <td><span class="status-pill">{{ course.status }}</span></td>
       </tr>
       {% endfor %}
     </tbody>
