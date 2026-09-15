@@ -121,4 +121,5 @@ Keep this file generic: scope, conventions and working rules only.
 ## Session log
 
 - s1 — 2026-09-10 to 09-15 — Identity and landing page, "Ink" theme, first six
-  publications, Phase 1 filler cleanup.
+  publications, template cleanup, CV page removed in favour of external profile
+  links.
