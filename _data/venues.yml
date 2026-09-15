@@ -1,9 +1,6 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+# Colour-codes and links journal names on the publications page.
+# Key must match the `journal` string in papers.bib.
+#
+# "Social Science Japan Journal":
+#   url: https://academic.oup.com/ssjj
+#   color: "#2c5282"
