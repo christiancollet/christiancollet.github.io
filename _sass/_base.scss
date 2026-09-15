@@ -4,6 +4,29 @@
 
 // Typography
 
+$ink-font-stack:
+  "Inter",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Helvetica,
+  Arial,
+  sans-serif;
+
+body {
+  font-family: $ink-font-stack;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ink-font-stack;
+  letter-spacing: -0.01em;
+}
+
 p,
 h1,
 h2,
@@ -1421,5 +1444,71 @@ figure.cover {
   /* mouse over link */
   a.cover-link:hover {
     color: #23212d !important;
+  }
+}
+
+/*******************************************************************************
+ * Ink structural pass — flatter surfaces, hairline rules, more air.
+ * Kept as one block so it can be lifted out in a single edit.
+ * See CLAUDE.md, "Look and feel".
+ ******************************************************************************/
+
+.card {
+  box-shadow: none !important;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 4px;
+
+  &:hover {
+    box-shadow: none !important;
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--global-divider-color);
+  margin: 2.75rem 0;
+}
+
+body {
+  line-height: 1.6;
+}
+
+h2,
+h3 {
+  margin-top: 2.25rem;
+}
+
+.post-title,
+h1 {
+  margin-bottom: 1.25rem;
+}
+
+// Profile links sit in the navbar brand slot on the About page
+// (`enable_navbar_social`). Scaled down from the theme's 1.7rem so they read as
+// part of the menu bar rather than a row of buttons.
+.navbar-brand.brand-name + .navbar-brand.social {
+  margin-left: 0.85rem;
+}
+
+.navbar-brand.social {
+  font-size: 1.05rem;
+
+  a {
+    margin-right: 0.55rem;
+
+    i::before {
+      color: var(--global-text-color-light);
+    }
+
+    &:hover i::before {
+      color: var(--global-theme-color);
+    }
+
+    img,
+    svg {
+      width: 1rem;
+      height: 1rem;
+      margin-bottom: 0;
+    }
   }
 }
