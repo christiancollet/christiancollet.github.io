@@ -32,9 +32,11 @@ Changes to `_config.yml` need a full restart; everything else rebuilds on save.
 ## Conventions
 
 ### Hosting
+
 Stay on `github.io`. No custom domain.
 
 ### BibTeX
+
 `papers.bib` follows the JPOP BibTeX Normalization Standard, so entries move
 between the site and the lit archive without reformatting.
 
@@ -42,6 +44,7 @@ al-folio supports these entry fields: `abstract`, `arxiv`, `bibtex_show`, `code`
 `doi`, `html`, `pdf`, `poster`, `slides`, `supp`, `video`, `website`.
 
 ### Language — selective Japanese
+
 English is the default throughout. Japanese appears where it carries information
 English can't: source titles, institution and publication names, survey
 instrument wording, and terms whose English rendering is a translation rather
@@ -55,6 +58,7 @@ Bibliography: follows the JPOP standard's title conventions, not this rule.
 No language switcher, no parallel page tree.
 
 ### Look and feel
+
 "Ink": accent `$ink-blue` (`#2c5282` light, `#7ba7d4` dark), Inter throughout,
 light-grey footer instead of the stock near-black band. Palette variables live in
 `_sass/_variables.scss`; the font stack is `$ink-font-stack` in `_sass/_base.scss`.
@@ -62,19 +66,23 @@ Any colour change must be made in BOTH the light and dark blocks of
 `_sass/_themes.scss` — the theme has a working dark mode.
 
 ### Project instructions
+
 This file lives in the repo, not in claude.ai project storage. It loads
 automatically with the folder, carries override authority as project
 instructions, and versions alongside the site. Project storage is for session
 handoffs and drafts, not for these rules.
 
 ### Contact
+
 `collet@icu.ac.jp` is published in the site footer via `_data/socials.yml`.
 
 ### Teaching materials
+
 Courses are a collection: one page per course, with a landing page listing them.
 Declared in `_config.yml` with a matching folder and a landing page in `_pages/`.
 
 ### File destinations
+
 - Default to this repo for anything that becomes part of the built site: pages,
   posts, collection entries, `_data` files, bib entries, publish-ready assets.
 - Default to `~/Projects/WIP/website/` for raw or unfinished source material: drafts, PDFs

@@ -68,7 +68,8 @@ Published notebook → Share → Embed gives you the URL. The pattern is
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
     loading="lazy"
     allowfullscreen
-    title="Deepnote notebook"></iframe>
+    title="Deepnote notebook"
+  ></iframe>
 </div>
 ```
 
@@ -93,7 +94,8 @@ version injects into the page and fights the theme's stylesheet.
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
     loading="lazy"
     allowfullscreen
-    title="Flourish visualisation"></iframe>
+    title="Flourish visualisation"
+  ></iframe>
 </div>
 ```
 
@@ -248,11 +250,11 @@ Images get click-to-zoom from `enable_medium_zoom`. Put post images in
 
 Plain markdown tables work and pick up the theme's styling.
 
-| Source  | Frequency | First year |
-| :------ | :-------- | ---------: |
-| NHK     | Monthly   |       1950 |
-| Jiji    | Monthly   |       1960 |
-| Kyodo   | Irregular |       1979 |
+| Source | Frequency | First year |
+| :----- | :-------- | ---------: |
+| NHK    | Monthly   |       1950 |
+| Jiji   | Monthly   |       1960 |
+| Kyodo  | Irregular |       1979 |
 
 ## Other things the theme does
 

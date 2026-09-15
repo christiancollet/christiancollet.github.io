@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Christian
-middle_name: 
+middle_name:
 last_name: Collet
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Christian Collet — professor of political science at International Christian University, Tokyo.
